@@ -138,7 +138,11 @@ Take a look to other annotations:
 
 @Header – specifies the header with the value of the annotated parameter
 
-##Step 6: Fetch All Users
+##Step 6: Create Reference of ApiInterface
+```
+ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+```
+##Step 7: Fetch All Users
 ```
 private void fetchUsers() {
         Call<UserResponse> call = apiService.getAllUser(SELECT);
@@ -158,7 +162,7 @@ private void fetchUsers() {
         });
 }
 ```
-##Step 7: To insert a new User
+##Step 8: To insert a new User
 ```
 private void InsertDummyUser(String username, String password) {
 
